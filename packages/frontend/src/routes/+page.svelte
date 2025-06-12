@@ -39,6 +39,7 @@
         <div class="space-y-2">
           <a href="/test/wasm" class="block text-blue-400 hover:text-blue-300">Test WASM Functions</a>
           <a href="/test/backend" class="block text-blue-400 hover:text-blue-300">Test Backend Connection</a>
+          <a href="/test/nodes" class="block text-green-400 hover:text-green-300">🎯 Node-Based Workflow Editor</a>
         </div>
       </div>
     </div>
