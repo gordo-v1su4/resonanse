@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "pnpm --dir ../.. run build:wasm && vite dev",
+    "dev": "pnpm -w run build:wasm && vite dev",
+    "dev:no-wasm": "vite dev",
     "build": "vite build",
     "preview": "vite preview"
   },
