@@ -31,7 +31,7 @@ fn perform_audio_analysis(audio_data: &[f32], sample_rate: u32) -> AudioAnalysis
     let beat_timestamps = detect_beats(audio_data, sample_rate);
     let transient_timestamps = detect_transients(audio_data, sample_rate);
     let loudness_contour = calculate_loudness_contour(audio_data, sample_rate);
-    let frequency_bands = analyze_frequency_bands(audio_data, sample_rate, &fft);
+    let frequency_bands = analyze_frequency_bands(audio_data, sample_rate, fft.as_ref());
     let tempo_estimate = estimate_tempo(&beat_timestamps, sample_rate);
 
     AudioAnalysisResult {
@@ -62,7 +62,7 @@ fn detect_beats(audio_data: &[f32], sample_rate: u32) -> Vec<u64> {
     beats
 }
 
-fn detect_transients(audio_data: &[f32], sample_rate: u32) -> Vec<u64> {
+fn detect_transients(audio_data: &[f32], _sample_rate: u32) -> Vec<u64> {
     // Simple transient detection based on amplitude changes
     let mut transients = Vec::new();
     let threshold = 0.3;
