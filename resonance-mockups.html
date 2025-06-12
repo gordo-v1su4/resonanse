@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resonance UI Mockups</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #0f172a;
+            color: #e2e8f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #f1f5f9;
+            text-align: center;
+        }
+        .mockup-section {
+            margin: 40px 0;
+            padding: 20px;
+            background: #1e293b;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+        .diagram-container {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+        .description {
+            background: #0f172a;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            margin: 15px 0;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .feature-card {
+            background: #0f172a;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+        }
+        .feature-card h4 {
+            color: #60a5fa;
+            margin-top: 0;
+        }
+        nav {
+            background: #1e293b;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        nav a {
+            color: #60a5fa;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+        nav a:hover {
+            background: #334155;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎵 Resonance - UI Mockup Variations</h1>
+        
+        <nav>
+            <a href="#variation1">Variation 1: Drawer-Based</a>
+            <a href="#variation2">Variation 2: Floating Panels</a>
+            <a href="#variation3">Variation 3: Accordion-Style</a>
+        </nav>
+
+        <div id="variation1" class="mockup-section">
+            <h2>Variation 1: Drawer-Based Layout with Sequence Stacking</h2>
+            
+            <div class="description">
+                <strong>Concept:</strong> Traditional video editing interface with collapsible side drawers and nested sequence management.
+            </div>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h4>🎯 Key Features</h4>
+                    <ul>
+                        <li>Collapsible left/right drawers</li>
+                        <li>Maximum timeline space when collapsed</li>
+                        <li>Nested sequence hierarchy</li>
+                        <li>Professional video editing workflow</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>📹 Sequence Management</h4>
+                    <ul>
+                        <li>Main sequence with sub-sequences</li>
+                        <li>Visual layer stacking</li>
+                        <li>Effect inheritance</li>
+                        <li>Audio-sync maintained</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="diagram-container">
+                <div class="mermaid">
+graph TB
+    subgraph "Top Header Bar"
+        HeaderBar["🎵 RESONANCE<br/>📁 File | ✏️ Edit | 👁️ View | ⚙️ Settings | 👤 User<br/>💾 Save | 📤 Export | ▶️ Play/Pause | ⏹️ Stop"]
+    end
+    
+    subgraph "Main Layout with Collapsible Drawers"
+        subgraph "Left Drawer (Collapsible)"
+            LeftToggle["◀️ Assets"]
+            subgraph "Asset Panel"
+                AudioFiles["🎵 Audio Files<br/>├── track1.mp3 (3:45)<br/>├── vocals.wav (3:42)<br/>└── drums.aiff (3:40)"]
+                VideoFiles["🎬 Video Files<br/>├── concert.mp4 (1080p)<br/>├── abstract.mov (4K)<br/>└── particles.webm (720p)"]
+                Presets["🎭 Effect Presets<br/>├── Glitch Pack<br/>├── Retro VHS<br/>└── Neon Dreams"]
+            end
+        end
+        
+        subgraph "Center Content Area"
+            subgraph "Timeline Section"
+                TimeControls["⏯️ 00:32 / 03:45 | 🔊 75% | 🔍 100%"]
+                
+                subgraph "Audio Track"
+                    Waveform["🎵 Audio Waveform with Transients & Beats"]
+                end
+                
+                subgraph "Video Sequences (Nested/Grouped)"
+                    MainSeq["📹 MAIN SEQUENCE"]
+                    
+                    subgraph "Sequence Layers"
+                        Layer1["Layer 1: Video + Effects"]
+                        Layer2["Layer 2: Overlay + Blend"]
+                        Layer3["Layer 3: Text + Graphics"]
+                    end
+                    
+                    SubSeq1["📹 SUB-SEQUENCE A (Chorus)"]
+                    SubSeq2["📹 SUB-SEQUENCE B (Bridge)"]
+                end
+                
+                MarkerTrack["📍 Markers: [Intro] [Verse] [Chorus] [Bridge] [Outro]"]
+            end
+            
+            subgraph "Bottom Tabs"
+                Tab1["🎬 Timeline View (Active)"]
+                Tab2["🔗 Node Editor"]
+                Tab3["🎨 Preview Canvas"]
+            end
+        end
+        
+        subgraph "Right Drawer (Collapsible)"
+            RightToggle["Analysis ▶️"]
+            subgraph "Analysis Panel"
+                AudioAnalysis["📊 Audio Analysis<br/>BPM: 128 | Key: Am"]
+                EffectsStack["🎭 Active Effects Stack"]
+                SequenceProps["📹 Sequence Properties"]
+            end
+        end
+    end
+    
+    style HeaderBar fill:#1a202c,stroke:#2d3748,color:#fff
+    style MainSeq fill:#553c9a,stroke:#805ad5,color:#fff
+    style SubSeq1 fill:#744210,stroke:#d69e2e,color:#fff
+    style SubSeq2 fill:#744210,stroke:#d69e2e,color:#fff
+    style Waveform fill:#2c5530,stroke:#48bb78,color:#fff
+                </div>
+            </div>
+        </div>
+
+        <div id="variation2" class="mockup-section">
+            <h2>Variation 2: Floating Panels with Sequence Tree</h2>
+            
+            <div class="description">
+                <strong>Concept:</strong> Modern, flexible interface with draggable floating panels and tree-based sequence organization.
+            </div>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h4>🎯 Key Features</h4>
+                    <ul>
+                        <li>Floating, draggable panels</li>
+                        <li>Pin/unpin functionality</li>
+                        <li>Tree-view sequence structure</li>
+                        <li>Highly customizable workspace</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>📹 Sequence Management</h4>
+                    <ul>
+                        <li>Hierarchical tree structure</li>
+                        <li>Visual nesting indicators</li>
+                        <li>Drag-and-drop organization</li>
+                        <li>Collapse/expand branches</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="diagram-container">
+                <div class="mermaid">
+graph TB
+    subgraph "Single Page App Layout"
+        TopBar["🎵 RESONANCE | 💾 | 📤 | ⏯️ | ⏹️ | 🔊 | 👤"]
+        
+        subgraph "Main Canvas Area"
+            subgraph "Floating Panel System"
+                Panel1["📁 ASSETS (Floating)<br/>📌 Pin/Unpin"]
+                Panel2["📊 ANALYSIS (Floating)<br/>📌 Pin/Unpin"]
+                Panel3["🎭 EFFECTS (Floating)<br/>📌 Pin/Unpin"]
+            end
+            
+            subgraph "Central Timeline"
+                TimelineHeader["⏯️ 01:23 / 03:45 | Zoom | Snap"]
+                AudioWave["🎵 Audio Waveform with Analysis"]
+                
+                subgraph "Sequence Tree Structure"
+                    RootSeq["🌳 PROJECT ROOT<br/>├─ 📹 MAIN_SEQUENCE<br/>│  ├─ 🎬 Layer_1<br/>│  ├─ 🎬 Layer_2<br/>│  └─ 🎬 Layer_3<br/>├─ 📹 CHORUS_SEQ<br/>└─ 📹 BRIDGE_SEQ"]
+                end
+                
+                SequenceTimeline["📹 VISUAL TIMELINE<br/>Nested Sequence Blocks"]
+                MarkerBar["📍 Markers and Regions"]
+            end
+            
+            subgraph "Bottom Dock (Collapsible)"
+                DockToggle["▲ Dock"]
+                NodeEditor["🔗 Node Editor | 🎨 Preview | 📊 Analyzer"]
+            end
+        end
+    end
+    
+    style TopBar fill:#1a202c,stroke:#2d3748,color:#fff
+    style Panel1 fill:#2d3748,stroke:#4a5568,color:#fff,stroke-dasharray: 5 5
+    style Panel2 fill:#744210,stroke:#d69e2e,color:#fff,stroke-dasharray: 5 5
+    style Panel3 fill:#553c9a,stroke:#805ad5,color:#fff,stroke-dasharray: 5 5
+    style RootSeq fill:#2c5530,stroke:#48bb78,color:#fff
+    style SequenceTimeline fill:#0f4c75,stroke:#3282b8,color:#fff
+                </div>
+            </div>
+        </div>
+
+        <div id="variation3" class="mockup-section">
+            <h2>Variation 3: Accordion-Style with Sequence Blocks</h2>
+            
+            <div class="description">
+                <strong>Concept:</strong> Vertical accordion layout with block-based sequence management, optimized for structured workflows.
+            </div>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h4>🎯 Key Features</h4>
+                    <ul>
+                        <li>Vertical accordion sections</li>
+                        <li>Block-based sequence containers</li>
+                        <li>Clear visual organization</li>
+                        <li>Mobile-friendly design</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>📹 Sequence Management</h4>
+                    <ul>
+                        <li>Visual sequence blocks</li>
+                        <li>Drag & drop reordering</li>
+                        <li>Color-coded by type</li>
+                        <li>Nested block indicators</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="diagram-container">
+                <div class="mermaid">
+graph TB
+    subgraph "Accordion-Based Single Page Layout"
+        HeaderStrip["🎵 RESONANCE ── ⏯️ Play ⏹️ Stop 💾 Save 📤 Export ── 👤 User"]
+        
+        subgraph "Vertical Accordion Sections"
+            subgraph "Section 1: Assets (Expandable)"
+                AssetHeader["📁 ASSETS ▼"]
+                AssetContent["🎵 Audio Files<br/>🎬 Video Files<br/>🎭 Presets"]
+            end
+            
+            subgraph "Section 2: Timeline (Always Expanded)"
+                TimelineHeader["🎬 TIMELINE ── Controls"]
+                AudioSection["🎵 AUDIO TRACK<br/>Waveform with Markers"]
+                
+                subgraph "Video Sequence Blocks"
+                    MainBlock["📹 MAIN SEQUENCE BLOCK<br/>Multiple Layers with Effects"]
+                    ChorusBlock["📹 CHORUS BLOCK [Nested]<br/>Linked to Main Sequence"]
+                    BridgeBlock["📹 BRIDGE BLOCK [Nested]<br/>Audio-Reactive Effects"]
+                end
+                
+                SequenceControls["🔧 SEQUENCE CONTROLS<br/>Block Management Tools"]
+            end
+            
+            subgraph "Section 3: Analysis (Expandable)"
+                AnalysisHeader["📊 ANALYSIS ▼"]
+                AnalysisContent["🎯 Audio Analysis<br/>🎭 Active Effects<br/>📹 Sequence Properties"]
+            end
+            
+            subgraph "Section 4: Preview (Expandable)"
+                PreviewHeader["🎨 PREVIEW ▼"]
+                PreviewContent["🖥️ Video Preview<br/>🔗 Node Editor<br/>💾 Export Options"]
+            end
+        end
+    end
+    
+    style HeaderStrip fill:#1a202c,stroke:#2d3748,color:#fff
+    style MainBlock fill:#553c9a,stroke:#805ad5,color:#fff
+    style ChorusBlock fill:#744210,stroke:#d69e2e,color:#fff
+    style BridgeBlock fill:#744210,stroke:#d69e2e,color:#fff
+    style TimelineHeader fill:#2c5530,stroke:#48bb78,color:#fff
+                </div>
+            </div>
+        </div>
+
+        <div class="mockup-section">
+            <h2>🎯 Next Steps</h2>
+            <div class="description">
+                Choose your preferred variation and I can help you:
+                <ul>
+                    <li>Create detailed component specifications</li>
+                    <li>Build interactive prototypes</li>
+                    <li>Implement the layout in your SvelteKit project</li>
+                    <li>Design the sequence management system</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            themeVariables: {
+                primaryColor: '#3b82f6',
+                primaryTextColor: '#1e293b',
+                primaryBorderColor: '#1e40af',
+                lineColor: '#64748b',
+                secondaryColor: '#e2e8f0',
+                tertiaryColor: '#f1f5f9'
+            }
+        });
+    </script>
+</body>
+</html>
