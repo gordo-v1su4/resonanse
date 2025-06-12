@@ -1,0 +1,32 @@
+# Node.js dependencies
+node_modules/
+pnpm-lock.yaml
+npm-debug.log*
+yarn.lock
+dist/
+build/
+.svelte-kit/
+.svelte/
+
+# Rust build artifacts
+/target/
+**/*.rs.bk
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# WASM build artifacts
+*.wasm
+
+# Logs
+*.log
+
+# Misc
+.env
+.env.*
+coverage/

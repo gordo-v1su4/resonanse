@@ -1,0 +1,3 @@
+[submodule "packages/audio-stretcher/rubberband"]
+	path = packages/audio-stretcher/rubberband
+	url = https://github.com/breakfastquay/rubberband.git

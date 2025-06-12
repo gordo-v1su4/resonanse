@@ -1,0 +1,19 @@
+{
+	"dependencies": {
+		"@melt-ui/svelte": "^0.86.6",
+		"pocketbase": "^0.26.1",
+		"svelte-flow": "^0.0.3",
+		"svelte-splitpanes": "^8.0.9",
+		"three": "^0.177.0"
+	},
+	"devDependencies": {
+		"@types/three": "^0.177.0",
+		"autoprefixer": "^10.4.21",
+		"postcss": "^8.5.5",
+		"tailwindcss": "^4.1.10"
+	},
+	"scripts": {
+		"build:wasm": "pnpm --filter logic-engine build && pnpm --filter audio-stretcher build",
+		"start:backend": "cd packages/backend && ./pocketbase serve"
+	}
+}

@@ -1,0 +1,6 @@
+[workspace]
+resolver = "2"
+members = [
+    "packages/logic-engine",
+    "packages/audio-stretcher",
+]
