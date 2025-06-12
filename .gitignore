@@ -30,3 +30,30 @@ Thumbs.db
 .env
 .env.*
 coverage/
+
+# Ignore common build and dependency folders in all packages
+/packages/*/node_modules/
+/packages/*/dist/
+/packages/*/build/
+/packages/*/.svelte-kit/
+/packages/*/.svelte/
+/packages/*/target/
+/packages/*/*.wasm
+
+# Ignore editor and OS files in all packages
+/packages/*/.DS_Store
+/packages/*/.idea/
+/packages/*/.vscode/
+/packages/*/*.swp
+/packages/*/*.swo
+
+# Ignore logs and environment files in all packages
+/packages/*/*.log
+/packages/*/.env
+/packages/*/.env.*
+
+# Ignore Rust backup files in all packages
+/packages/**/*.rs.bk
+
+# Ignore coverage in all packages
+/packages/*/coverage/
