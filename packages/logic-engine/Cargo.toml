@@ -4,10 +4,11 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-
 wasm-bindgen = "0.2"
 serde = { version = "1.0", features = ["derive"] }
 serde-wasm-bindgen = "0.6"
+js-sys = "0.3"
+web-sys = "0.3"
 
 symphonia = { version = "0.5", features = ["all-codecs", "all-formats"] }
 rustfft = "6.1"
