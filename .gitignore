@@ -1,21 +1,3 @@
-# Ignore all files in the root directory
-*
-
-# Ignore all files in the packages directory
-packages/*
-
-# Ignore all files in the packages/frontend directory
-packages/frontend/*
-
-# Ignore all files in the packages/logic-engine directory
-packages/logic-engine/*
-
-# Ignore all files in the packages/audio-stretcher directory
-packages/audio-stretcher/*
-
-# Ignore all files in the packages/backend directory
-packages/backend/*
-
 # Dependencies
 node_modules/
 npm-debug.log*
