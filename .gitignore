@@ -1,0 +1,7 @@
+node_modules
+/dist
+/target
+.svelte-kit/
+build/
+pb_data/
+pb_migrations/
