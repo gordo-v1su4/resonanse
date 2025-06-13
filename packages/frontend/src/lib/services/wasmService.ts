@@ -1,5 +1,4 @@
-import initLogicEngine from '$lib/wasm/logic-engine/logic_engine.js';
-import initAudioStretcher from '$lib/wasm/audio-stretcher/audio_stretcher.js';
+import { initializeWasmWithFallback } from './wasmMock';
 
 let logicEngine;
 let audioStretcher;
@@ -9,13 +8,25 @@ export async function initializeWasm() {
     return { logicEngine, audioStretcher };
   }
 
-  const logicEnginePromise = initLogicEngine();
-  const audioStretcherPromise = initAudioStretcher();
+  try {
+    // Try to load real WASM modules
+    const initLogicEngine = await import('$lib/wasm/logic-engine/logic_engine.js');
+    const initAudioStretcher = await import('$lib/wasm/audio-stretcher/audio_stretcher.js');
 
-  [logicEngine, audioStretcher] = await Promise.all([
-    logicEnginePromise,
-    audioStretcherPromise,
-  ]);
+    const logicEnginePromise = initLogicEngine.default();
+    const audioStretcherPromise = initAudioStretcher.default();
 
-  return { logicEngine, audioStretcher };
+    [logicEngine, audioStretcher] = await Promise.all([
+      logicEnginePromise,
+      audioStretcherPromise,
+    ]);
+
+    console.log('✅ Real WASM modules loaded successfully');
+    return { logicEngine, audioStretcher };
+  } catch (error) {
+    console.warn('⚠️ Real WASM modules not available, falling back to mocks:', error.message);
+
+    // Fall back to mock implementation
+    return await initializeWasmWithFallback();
+  }
 }
