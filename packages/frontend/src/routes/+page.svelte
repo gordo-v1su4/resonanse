@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <script>
   import { onMount } from 'svelte';
 
@@ -81,8 +82,13 @@
           <a href="/test/effects" class="block text-blue-400 hover:text-blue-300 font-semibold">🧪 Effects Test Suite</a>
           <a href="/test/wasm" class="block text-blue-400 hover:text-blue-300">Test WASM Functions</a>
           <a href="/test/backend" class="block text-blue-400 hover:text-blue-300">Test Backend Connection</a>
+          <a href="/test/nodes" class="block text-green-400 hover:text-green-300">🎯 Node-Based Workflow Editor</a>
         </div>
       </div>
     </div>
   </div>
 </div>
+=======
+<h1>Welcome to SvelteKit</h1>
+<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+>>>>>>> main
