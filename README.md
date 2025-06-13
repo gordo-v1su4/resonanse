@@ -1,5 +1,6 @@
 # Resonance
 
+<<<<<<< HEAD
 This is the repository for the Resonance project, a generative audio-reactive video editor.
 
 ## Project Structure
@@ -36,3 +37,6 @@ This is the repository for the Resonance project, a generative audio-reactive vi
 ├── pnpm-lock.yaml
 ├── pnpm-workspace.yaml
 └── README.md
+=======
+This project is a monorepo using pnpm workspaces. The tech stack will include SvelteKit for the frontend, Rust for the backend, and PocketBase for the database.
+>>>>>>> main
