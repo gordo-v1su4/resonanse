@@ -1,16 +1,12 @@
 use wasm_bindgen::prelude::*;
 use serde::{Deserialize, Serialize};
-<<<<<<< HEAD
-=======
 use rustfft::{FftPlanner, num_complex::Complex};
->>>>>>> origin/feature/threejs-video-effects-audio-reactivity
 
 #[wasm_bindgen]
 pub fn add(a: u32, b: u32) -> u32 {
     a + b
 }
 
-<<<<<<< HEAD
 // Node graph structures
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct NodeData {
@@ -208,7 +204,8 @@ fn get_node_input_value(
         }
     }
     None
-=======
+}
+
 #[derive(Serialize, Deserialize)]
 pub struct AudioAnalysisResult {
     pub beat_timestamps: Vec<u64>,
@@ -327,7 +324,6 @@ fn estimate_tempo(beat_timestamps: &[u64], sample_rate: u32) -> f32 {
 
     let avg_interval = intervals.iter().sum::<f32>() / intervals.len() as f32;
     60.0 / avg_interval // Convert to BPM
->>>>>>> origin/feature/threejs-video-effects-audio-reactivity
 }
 
 #[cfg(test)]

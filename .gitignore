@@ -45,7 +45,8 @@ target/
 
 # WASM
 *.wasm
-pkg/
+/pkg/
+**/pkg/
 wasm-pack.log
 
 # Environment variables
